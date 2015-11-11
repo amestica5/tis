@@ -2,7 +2,7 @@
 $servername = $_SERVER["host"];
 $username = $_SERVER["user"];
 $password = $_SERVER["pass"];
-$basedatos = $_SERVER["db"];
+$basedatos = $_SERVER["base"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password,$basedatos);
