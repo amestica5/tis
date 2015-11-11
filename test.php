@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 } 
 echo "Connected successfully";
 
-//$consulta = "SELECT COUNT(*) FROM  `test` WHERE id <1500050";
-$resultado= mysql_query("SELECT COUNT(*) FROM 'test'");
+$consulta = "SELECT COUNT(*) FROM  `test` WHERE id <1500050";
+$resultado= mysql_query($consulta);
 var_dump($resultado);
 
 
