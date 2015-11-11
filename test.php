@@ -16,6 +16,6 @@ $consulta = "SELECT COUNT(*) FROM  `test` WHERE id <1500050";
 $resultado= mysql_query($consulta);
 var_dump($resultado);
 
-}
+
 
 ?>
