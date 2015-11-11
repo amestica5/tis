@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $password,$basedatos);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     
-} else if ($result = $msqli->query("SELECT COUNT(*) FROM  `test` WHERE id < 1500050")) {
+} else if ($result = $mysqli->query("SELECT COUNT(*) FROM  `test` WHERE id < 1500050")) {
     while($obj = $result->fetch_object()){
         echo $result;   
     }
