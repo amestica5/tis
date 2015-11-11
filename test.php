@@ -11,8 +11,9 @@ $conn = new mysqli($servername, $username, $password,$basedatos);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } elseif ($result = $conn->query("SELECT * FROM  `test` WHERE id < 1500050")) {
-    while($obj = $result->fetch_object()){
-        echo $obj;  
+    $obj = $result->fetch_object()
+    foreach($obj as $obj2)
+    echo $obj2;
     }
 }
 echo "Connected successfully";
