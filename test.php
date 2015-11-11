@@ -11,4 +11,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 echo "Connected successfully";
+
+$consulta = mysql_query('SELECT * 
+FROM  `test` 
+WHERE id <1500050');
+
+for($i=0;$i<50;$i++){
+echo $consulta[$i];
+}
+
 ?>
