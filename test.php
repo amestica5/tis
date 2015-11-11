@@ -12,8 +12,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } elseif ($result = $conn->query("SELECT * FROM  `test` WHERE id < 1500050")) {
     $obj = $result->fetch_object()
-    foreach($obj as $obj2)
-    echo $obj2;
+    for($i=0; $i<50;$i++){
+        echo $obj[$i];
     }
 }
 echo "Connected successfully";
