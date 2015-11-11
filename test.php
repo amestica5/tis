@@ -12,12 +12,10 @@ if ($conn->connect_error) {
 } 
 echo "Connected successfully";
 
-$consulta = "SELECT * FROM  `test` WHERE id <1500050";
+$consulta = "SELECT COUNT(*) FROM  `test` WHERE id <1500050";
 $resultado= mysql_query($consulta);
-$row=mysql_fetch_array($resultado);
-var_dump($row);
-for($i=0;$i<50;$i++){
-echo $row[$i];
+var_dump($resultado);
+
 }
 
 ?>
