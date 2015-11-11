@@ -16,7 +16,7 @@ $consulta = "SELECT * FROM  `test` WHERE id <1500050";
 $resultado= mysql_query($consulta);
 var_dump($resultado);
 for($i=0;$i<50;$i++){
-echo $consulta[$i];
+echo $resultado[$i];
 }
 
 ?>
