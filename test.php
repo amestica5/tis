@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } elseif ($result = $conn->query("SELECT COUNT(*) FROM  `test` WHERE id < 1500050")) {
     while($obj = $result->fetch_object()){
-        var_dump($result);  
+        var_dump($obj);  
     }
 }
 echo "Connected successfully";
