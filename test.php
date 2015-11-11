@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     
 } else if ($result = $mysqli->query("SELECT COUNT(*) FROM  `test` WHERE id < 1500050")) {
     while($obj = $result->fetch_object()){
-        echo $result;   
+        echo $obj;   
     }
 }
 echo "Connected successfully";
