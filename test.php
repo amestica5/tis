@@ -2,9 +2,10 @@
 $servername = $_SERVER["host"];
 $username = $_SERVER["user"];
 $password = $_SERVER["pass"];
+$basedatos = $_SERVER["db"];
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password,$basedatos);
 
 // Check connection
 if ($conn->connect_error) {
