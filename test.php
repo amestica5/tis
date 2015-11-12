@@ -10,9 +10,9 @@ $conn = new mysqli($servername, $username, $password,$basedatos);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} elseif ($result = $conn->query("SELECT * FROM  `test` WHERE id < 1500050")) {
+} elseif ($result = $conn->query("SELECT * FROM  `usuarios` WHERE id < 1500050")) {
     while($obj = $result->fetch_object())
-    echo $obj->id ." ". $obj->random. "<br/>";
+    echo $obj->nombre_usuario ." ". $obj->password. "<br/>";
     
 }
 
