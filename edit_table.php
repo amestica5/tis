@@ -5,11 +5,12 @@ $password = $_SERVER["pass"];
 $basedatos = $_SERVER["base"];
 // Create connection
 $conn = new mysqli($servername, $username, $password,$basedatos);
-$sql = "UPDATE usuarios SET nombre_usuario='usuario1' WHERE id=1";
-
+for ($i=1; $i<1500000;$i++){
+$sql = "UPDATE usuarios SET nombre_usuario='usuario.$i' WHERE id=$i";
+}
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Record updated successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error updating record: " . $conn->error;
 }
 ?>
