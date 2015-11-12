@@ -12,10 +12,11 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } elseif ($result = $conn->query("SELECT * FROM  `test` WHERE id < 1500050")) {
     while($obj = $result->fetch_object())
-    echo $obj->id;
+    echo $obj->id ." ". $obj->random;
+    echo "<br>";
     
 }
-echo "Connected successfully";
+
 
 
 
