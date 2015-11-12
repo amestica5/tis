@@ -5,8 +5,7 @@ $password = $_SERVER["pass"];
 $basedatos = $_SERVER["base"];
 // Create connection
 $conn = new mysqli($servername, $username, $password,$basedatos);
-$sql = "INSERT INTO usuarios (nombre_usuario)
-VALUES ('usuario1')";
+$sql = "UPDATE usuarios SET nombre_usuario='usuario1' WHERE id=1";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
