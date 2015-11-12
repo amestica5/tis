@@ -5,9 +5,5 @@ $password = $_SERVER["pass"];
 $basedatos = $_SERVER["base"];
 
 $enlace =  mysql_connect($servername, $username, $password);
-if (!$enlace) {
-    die('No pudo conectarse: ' . mysql_error());
-}
-echo 'Conectado satisfactoriamente';
-mysql_close($enlace);
+resultado = mysql_query('INSERT INTO usuarios(nombre_usuario) VALUES("usuario1")');
 ?>
