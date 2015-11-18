@@ -9,12 +9,9 @@ $conn = new mysqli($servername, $username, $password,$basedatos);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     
-} else{
-    for($i=0; $i<50;$i++){
-    $result = $conn->query("SELECT * FROM  `usuarios` WHERE id < $i"); 
-    $obj = $result->fetch_object();
-    var_dump($obj);
-    //echo $obj->nombre_usuario ."<br/>";
+} elseif {$result = $conn->query("SELECT * FROM  `usuarios` WHERE id < 50"); 
+    while($obj = $result->fetch_object())
+    echo $obj->nombre_usuario ."<br/>";
     }
 }
 ?>
