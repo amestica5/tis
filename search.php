@@ -13,5 +13,5 @@ if ($conn->connect_error) {
     while($obj = $result->fetch_object())
     echo $obj->nombre_usuario ."<br/>";
     
-}}
+}
 ?>
