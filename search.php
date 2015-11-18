@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     
 } else{
-    $result = $conn->query("SELECT * FROM  `usuarios` WHERE id < 1500050")) 
+    $result = $conn->query("SELECT * FROM  `usuarios` WHERE id < 1500050"); 
     while($obj = $result->fetch_object())
     echo $obj->nombre_usuario ." ". $obj->password. "<br/>";
     
