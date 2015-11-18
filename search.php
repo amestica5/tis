@@ -13,7 +13,8 @@ if ($conn->connect_error) {
     for($i=0; $i<50;$i++){
     $result = $conn->query("SELECT * FROM  `usuarios` WHERE id < $i"); 
     $obj = $result->fetch_object();
-    echo $obj->nombre_usuario ."<br/>";
+    var_dump($obj);
+    //echo $obj->nombre_usuario ."<br/>";
     }
 }
 ?>
