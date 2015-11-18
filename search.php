@@ -13,7 +13,7 @@ if ($conn->connect_error) {
     for($i=0; $i<50;$i++){
     $result = $conn->query("SELECT * FROM  `usuarios` WHERE id < $i"); 
     while($obj = $result->fetch_object())
-    echo $obj->nombre_usuario ." ". $obj->password. "<br/>";
+    echo $obj->nombre_usuario ."<br/>";
     }
 }
 ?>
